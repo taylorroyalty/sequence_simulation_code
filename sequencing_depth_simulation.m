@@ -1,3 +1,4 @@
+%Matlab code for generating Figure 4
 target_coverage=[0.5 0.7 0.9 0.95 0.99 1];%target coverages to log for
 even_flag=4;%arbitrary flag reflecting weight matrix used
 l=100;%Read length; only important for determining coverate
