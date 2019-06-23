@@ -1,4 +1,4 @@
-#load in fit object and predict sequencing effort (Figure 5)
+#R code that loads in fit object and predict sequencing effort (Figure 5)
 genome_size<-1e6 #in base pairs
 target_fraction<-0.5 #desired fraction of the target genome (values: 0 to 1)
 metagenome_prop<-0.5 #proportion of metagenome of the target genome (values: 0 to 1)
