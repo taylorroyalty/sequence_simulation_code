@@ -1,5 +1,6 @@
-%Generates data for Figure 5
-target_coverage=linspace(0.5,1,100);%[0.5 0.7 0.9 0.95 0.99 1];%target coverages to log for
+%Generates data for Figure 4
+%Code inputs
+target_coverage=linspace(0.5,1,100);%[0.5 0.7 0.9 0.95 0.99 1];%fraction of exhaustion (genome coverage)
 fraction_range=logspace(-2,0,30);%fraction that target genome represents of entire metagenome
 num_seq=5e6;%number of sequences sampled at a time. impacts computational time/resolution
 rep_num=1;%replicates
@@ -7,7 +8,7 @@ l=100;%Read length
 filename_str='modeled_sequencing_target_simulation.csv';
 Mbp=[15e6 20e6];%size of genomes;
 
-
+%Simulation
 outfile=[];
 fraction_range=fliplr(fraction_range);
 for g_size=Mbp
@@ -16,7 +17,7 @@ for g_size=Mbp
         for p=fraction_range
             fraction=p/k;
             G_mg=zeros(1,k+1);
-            w=[ones(1,k)*fraction 1-p];
+            w=[ones(1,k)*fraction 1-p]; %this is a weight distribution (i.e., rareness/relative abundance)
             act_coverage=0;
             sequences=0;
             population=linspace(1,k+1,k+1);%indices sampled for population;vectorized
