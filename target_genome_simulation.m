@@ -1,4 +1,4 @@
-%Generates data for Figure 4
+%Matlab code generating data for Figure 3
 %Code inputs
 target_coverage=linspace(0.5,1,100);%[0.5 0.7 0.9 0.95 0.99 1];%fraction of exhaustion (genome coverage)
 fraction_range=logspace(-2,0,30);%fraction that target genome represents of entire metagenome
