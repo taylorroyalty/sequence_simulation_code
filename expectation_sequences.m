@@ -1,4 +1,4 @@
-%Applying equation 6 to get analytical solution for coupon collector problem (Figure 2)
+%Matlab code applying equation 6 to get analytical solution for coupon collector problem (Figure 2)
 g=round(linspace(1,100,10));%number of unique clades
 k=1e6;%average genome size
 l=100;%read length
